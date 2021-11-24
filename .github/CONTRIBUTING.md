@@ -7,9 +7,11 @@ source: "https://github.com/creativecommons/creativecommons.github.io-source/blo
 
 ## Finding an issue
 
-Here's a list of [all our current projects](/projects/). We use GitHub issues associated with each project to track the work associated with that project. That's where you can find things to work on.
+Here's a list of [all our current projects](https://github.com/ScoopInstaller/Scoop/projects). We use GitHub issues associated with each project to track the work associated with that project. That's where you can find things to work on.
 
-We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues. We have a standard set of labels across all projects, [documented here](/contributing-code/repo-labels/). Here are some of the ones that are most relevant to finding a good issue to work on:
+We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues. 
+<!-- 
+We have a standard set of labels across all projects, [documented here](/contributing-code/repo-labels/). Here are some of the ones that are most relevant to finding a good issue to work on:
 
 - **Issues available for community contribution:**
   - The following tags mark issues that are open for community contribution:
@@ -32,11 +34,12 @@ We make extensive use of issue labels to designate the priority, status and begi
   - Please add a comment asking one of the maintainers to triage the issue and label it as appropriate.
 
 You can use our [Issue Finder tool](/contributing-code/issue-finder/) to find a good issue that matches your skills and familiarity with our software and community.
+-->
 
 Some helpful saved searches on GitHub than can assist with finding an issue:
-- [issues labeled <span class="gh-label friendliness">good first issue</span>](https://github.com/search?q=org%3Acreativecommons+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
-- [issues labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3Acreativecommons+is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+-linked%3Apr)
-- [PRs labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3Acreativecommons+is%3Apr+is%3Aopen+label%3A%22help+wanted%22)
+- [issues labeled <span class="gh-label friendliness">good first issue</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
+- [issues labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+-linked%3Apr)
+- [PRs labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Apr+is%3Aopen+label%3A%22help+wanted%22)
 
 Check the issue comments/labels to see whether someone else has indicated that they are working on it. If someone is already working on it and there has been activity within the last 7 days, you may want to find a different issue to work on.
 
