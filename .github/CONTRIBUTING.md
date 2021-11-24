@@ -1,0 +1,62 @@
+---
+name: "Contribution Guidelines"
+about: "We do all of our development [on GitHub](https://github.com/ScoopInstaller/). If you are not familiar with GitHub or pull requests, [here is an excellent guide to get started](https://guides.github.com/activities/hello-world/)."
+title: "Contribution Guidelines"
+source: "https://github.com/creativecommons/creativecommons.github.io-source/blob/master/content/contributing-code/contents.lr"
+---
+
+## Finding an issue
+
+Here's a list of [all our current projects](/projects/). We use GitHub issues associated with each project to track the work associated with that project. That's where you can find things to work on.
+
+We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues. We have a standard set of labels across all projects, [documented here](/contributing-code/repo-labels/). Here are some of the ones that are most relevant to finding a good issue to work on:
+
+- **Issues available for community contribution:**
+  - The following tags mark issues that are open for community contribution:
+    - <span class="gh-label friendliness">help wanted</span> : Open to participation from the community but not necessarily beginner-friendly
+    - <span class="gh-label friendliness">good first issue</span> : Open to participation from the community and friendly towards new contributors
+  - You do not need our permission to work on one of these issues.
+  - You may work on an issue labeled <span class="gh-label friendliness">good first issue</span> even if it's not your first issue.
+* **Issues not available for community contribution:**
+  - The following tags mark issues that are _not_ open for community contribution:
+    - <span class="gh-label friendliness">🔒 staff only</span> : Requires infrastructure access or institutional knowledge that would be impractical to provide to the community
+  - Do not work on these.
+- **Issues not ready for work:**
+  - The following tags mark issues that are _not_ open for community contribution:
+    - <span class="gh-label status-neutral">🚧 status: blocked</span>: Blocked by other work that needs to be done first
+    - <span class="gh-label status-dark">🧹 status: ticket work required </span>: Needs additional work before it is ready to be taken up
+    - <span class="gh-label status-darker">🚦 status: awaiting triage</span>: Has not been triaged by a maintainer
+  - Do not work on these.
+- **Issues without any of the above labels:**
+  - These issues _may_ (or may not) be open for contribution.
+  - Please add a comment asking one of the maintainers to triage the issue and label it as appropriate.
+
+You can use our [Issue Finder tool](/contributing-code/issue-finder/) to find a good issue that matches your skills and familiarity with our software and community.
+
+Some helpful saved searches on GitHub than can assist with finding an issue:
+- [issues labeled <span class="gh-label friendliness">good first issue</span>](https://github.com/search?q=org%3Acreativecommons+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
+- [issues labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3Acreativecommons+is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+-linked%3Apr)
+- [PRs labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3Acreativecommons+is%3Apr+is%3Aopen+label%3A%22help+wanted%22)
+
+Check the issue comments/labels to see whether someone else has indicated that they are working on it. If someone is already working on it and there has been activity within the last 7 days, you may want to find a different issue to work on.
+
+## Contribution process
+
+Once you've found an issue you'd like to work on, please follow these steps to make your contribution:
+
+1. Comment on it and say you're working on that issue. This is to avoid conflicts with others also working on the issue.
+2. Write your code and submit your pull request. Be sure to read and follow our **[pull request guidelines](/contributing-code/pr-guidelines/)**!
+3. Wait for code review and address any issues raised as soon as you can.
+
+**A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
+
+## Proposing a new issue
+
+If you want to work on something that there is no GitHub issue for, follow these steps:
+
+1. Create a a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
+    * We are very reluctant to accept random pull requests without a related issue created first.
+2. The issue will automatically have the <span class="gh-label status-darker">🚦 status: awaiting triage</span> label applied. Wait for a project maintainer to evaluate your issue and decide whether it's something that we will accept a pull request for.
+3. Once the project maintainer has approved the issue and removed the <span class="gh-label status-darker">🚦 status: awaiting triage</span> label, you may start work on code as described in the "Contribution process" section above.
+
+When in doubt, ask a question on [one of our community forums](/community/).
