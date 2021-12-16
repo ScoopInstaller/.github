@@ -11,15 +11,4 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
-# causes this error:  
-# Sponsor ScoopInstaller/Scoop
-# 
-# Some errors were encountered when parsing the FUNDING.yml file:
-# 
-#     Some users provided are not enrolled in GitHub Sponsors. Apply to Sponsors.
-# 
-# Learn more about formatting FUNDING.yml.
-# External links
-# https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DM2SUH9EUXSKJ 
-# 
-# custom: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DM2SUH9EUXSKJ
+custom: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DM2SUH9EUXSKJ"
