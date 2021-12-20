@@ -91,9 +91,11 @@ Once you've found an issue you'd like to work on, please follow these steps to m
     * If the program file is a GUI application _and_ it doesn't accept any commandline arguments, no need to add it in `bin`.
     * If an array contains only one item, write it as a string.
     * If the application provides _only_ a 32bit download, the `architecture` field is not required. In all other cases, `architecture` field is mandatory.
-5. Test your manifest by installing, uninstalling, checking functionality, persistence and use the **checkver** utility to confirm version.
-6. Submit your pull request.
-7. Wait for code review and address any issues raised as soon as you can.
+5. Test your manifest by installing, uninstalling, checking functionality, persistence etc.
+6. Confirm that manifest gets updated automatically - see [App Manifest Autoupdate](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate).
+7. Submit your pull request.
+8. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
+9. Wait for code review and address any issues raised as soon as you can.
 
 **A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
 
