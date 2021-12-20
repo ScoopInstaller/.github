@@ -7,7 +7,7 @@ source: "https://github.com/creativecommons/creativecommons.github.io-source/blo
 
 ## Finding an issue
 
-Here's a list of [all our current projects](https://github.com/ScoopInstaller/Scoop/projects). We use GitHub issues associated with each project to track the work associated with that project. That's where you can find things to work on.
+Here's a list of [all our current repositories](https://github.com/orgs/ScoopInstaller/repositories). We use GitHub issues to track the work associated with that repository. That's where you can find things to work on.
 
 We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues. 
 <!-- 
@@ -15,7 +15,7 @@ We have a standard set of labels across all projects, [documented here](/contrib
 
 - **Issues available for community contribution:**
   - The following tags mark issues that are open for community contribution:
-    - <span class="gh-label friendliness">help wanted</span> : Open to participation from the community but not necessarily beginner-friendly
+    - <span class="gh-label friendliness">help-wanted</span> : Open to participation from the community but not necessarily beginner-friendly
     - <span class="gh-label friendliness">good first issue</span> : Open to participation from the community and friendly towards new contributors
   - You do not need our permission to work on one of these issues.
   - You may work on an issue labeled <span class="gh-label friendliness">good first issue</span> even if it's not your first issue.
@@ -38,8 +38,8 @@ You can use our [Issue Finder tool](/contributing-code/issue-finder/) to find a 
 
 Some helpful saved searches on GitHub than can assist with finding an issue:
 - [issues labeled <span class="gh-label friendliness">good first issue</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
-- [issues labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Aissue+is%3Aopen+label%3A%22help+wanted%22+-linked%3Apr)
-- [PRs labeled <span class="gh-label friendliness">help wanted</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Apr+is%3Aopen+label%3A%22help+wanted%22)
+- [issues labeled <span class="gh-label friendliness">help-wanted</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Aissue+is%3Aopen+label%3A%22help-wanted%22+-linked%3Apr)
+- [PRs labeled <span class="gh-label friendliness">help-wanted</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Apr+is%3Aopen+label%3A%22help-wanted%22)
 
 Check the issue comments/labels to see whether someone else has indicated that they are working on it. If someone is already working on it and there has been activity within the last 7 days, you may want to find a different issue to work on.
 
@@ -47,9 +47,49 @@ Check the issue comments/labels to see whether someone else has indicated that t
 
 Once you've found an issue you'd like to work on, please follow these steps to make your contribution:
 
+### For Scoop core:
+
 1. Comment on it and say you're working on that issue. This is to avoid conflicts with others also working on the issue.
-2. Write your code and submit your pull request. Be sure to read and follow our **[pull request guidelines](/contributing-code/pr-guidelines/)**!
-3. Wait for code review and address any issues raised as soon as you can.
+2. Fork the repository and create a new branch from the `develop` branch, with an appropriate name.
+3. Write your code and run tests to check for regressions.
+4. Update the tests (if required) and update documentation.
+5. Submit your pull request.
+6. Wait for code review and address any issues raised as soon as you can.
+
+### For Scoop buckets:
+
+1. Comment on it and say you're working on that issue. This is to avoid conflicts with others also working on the issue.
+2. Fork the repository and create a new branch from the default branch (usually `master`), with an appropriate name.
+3. Write your code. Follow these guidelines for writing manifests:
+    * Read the Wiki on how app manifests work - [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) - and how to create one - [Creating an App Manifest](https://github.com/ScoopInstaller/Scoop/wiki/Creating-an-app-manifest).
+    * Follow this general order of fields (whichever exist) in the JSON file:
+      - `version`
+      - `description`
+      - `homepage`
+      - `license`
+      - `url`
+      - `hash`
+      - `extract_dir`
+      - `extract_to`
+      - `pre_install`
+      - `installer`
+      - `post_install`
+      - `bin`
+      - `shortcuts`
+      - `persist`
+      - `uninstaller`
+      - `checkver`
+      - `autoupdate`
+      - `notes`
+    * Use a tab width of 4 spaces.
+    * Portable configuration is highly preferred (by using `persist`).
+    * If the program file is a CLI application, no need to add it in `shortcuts`.
+    * If the program file is a GUI application _and_ it doesn't accept any commandline arguments, no need to add it in `bin`.
+    * If an array contains only one item, write it as a string.
+    * If the application provides _only_ a 32bit download, the `architecture` field is not required. In all other cases, `architecture` field is mandatory.
+5. Test your manifest by installing, uninstalling, checking functionality, persistence and use the **checkver** utility to confirm version.
+6. Submit your pull request.
+7. Wait for code review and address any issues raised as soon as you can.
 
 **A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
 
@@ -57,9 +97,9 @@ Once you've found an issue you'd like to work on, please follow these steps to m
 
 If you want to work on something that there is no GitHub issue for, follow these steps:
 
-1. Create a a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
+1. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
     * We are very reluctant to accept random pull requests without a related issue created first.
-2. The issue will automatically have the <span class="gh-label status-darker">🚦 status: awaiting triage</span> label applied. Wait for a project maintainer to evaluate your issue and decide whether it's something that we will accept a pull request for.
-3. Once the project maintainer has approved the issue and removed the <span class="gh-label status-darker">🚦 status: awaiting triage</span> label, you may start work on code as described in the "Contribution process" section above.
+2. Wait for a project maintainer to evaluate your issue and decide whether it's something that we will accept a pull request for.
+3. Once the project maintainer has approved the issue, you may start work on code as described in the **Contribution process** section above.
 
-When in doubt, ask a question on [one of our community forums](/community/).
+When in doubt, ask a question in the Discussions tab of the relevant repository.
