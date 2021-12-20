@@ -7,7 +7,7 @@ source: "https://github.com/creativecommons/creativecommons.github.io-source/blo
 
 ## Finding an issue
 
-Here's a list of [all our current repositories](https://github.com/orgs/ScoopInstaller/repositories). We use GitHub issues to track the work associated with that repository. That's where you can find things to work on.
+Here's a list of [all our current repositories](https://github.com/orgs/ScoopInstaller/repositories). We use GitHub issues to track the work associated with each repository. That's where you can find things to work on.
 
 We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues. 
 <!-- 
@@ -67,6 +67,9 @@ Once you've found an issue you'd like to work on, please follow these steps to m
       - `description`
       - `homepage`
       - `license`
+      - `notes`
+      - `depends`
+      - `suggest`
       - `url`
       - `hash`
       - `extract_dir`
@@ -74,13 +77,14 @@ Once you've found an issue you'd like to work on, please follow these steps to m
       - `pre_install`
       - `installer`
       - `post_install`
+      - `env_add_path`
+      - `env_set`
       - `bin`
       - `shortcuts`
       - `persist`
       - `uninstaller`
       - `checkver`
       - `autoupdate`
-      - `notes`
     * Use a tab width of 4 spaces.
     * Portable configuration is highly preferred (by using `persist`).
     * If the program file is a CLI application, no need to add it in `shortcuts`.
