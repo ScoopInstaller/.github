@@ -86,6 +86,7 @@ Once you've found an issue you'd like to work on, please follow these steps to m
       - `checkver`
       - `autoupdate`
     * Use a tab width of 4 spaces.
+    * The license property should be a valid [SPDX Identifier](https://spdx.org/licenses).
     * Portable configuration is highly preferred (by using `persist`).
     * If the program file is a CLI application, no need to add it in `shortcuts`.
     * If the program file is a GUI application _and_ it doesn't accept any commandline arguments, no need to add it in `bin`.
