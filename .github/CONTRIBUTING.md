@@ -53,7 +53,7 @@ Once you've found an issue you'd like to work on, please follow these steps to m
 2. Fork the repository and create a new branch from the `develop` branch, with an appropriate name.
 3. Write your code and run tests to check for regressions.
 4. Update the tests (if required) and update documentation.
-5. Submit your pull request.
+5. Submit your pull request. For PR titles, follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#commit-message-with-scope).
 6. Wait for code review and address any issues raised as soon as you can.
 
 ### For Scoop buckets:
@@ -93,7 +93,10 @@ Once you've found an issue you'd like to work on, please follow these steps to m
     * If the application provides _only_ a 32bit download, the `architecture` field is not required. In all other cases, `architecture` field is mandatory.
 5. Test your manifest by installing, uninstalling, checking functionality, persistence etc.
 6. Confirm that manifest gets updated automatically - see [App Manifest Autoupdate](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate).
-7. Submit your pull request.
+7. Submit your pull request. Titles should follow these rules:
+    * If it's a new manifest, use `<app name>: Add version <version>`.
+    * If it's an update to an existing manifest, use `<app name>@<version>: <small description>`.
+    * If it's something related to maintenance, use `(chore): <small description>`.
 8. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
 9. Wait for code review and address any issues raised as soon as you can.
 
