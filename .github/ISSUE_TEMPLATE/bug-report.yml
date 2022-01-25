@@ -70,6 +70,22 @@ body:
     required: true
 - type: textarea
   attributes:
+    label: Scoop Config
+    description: Paste verbatim output from `Get-Content ~\.config\scoop\config.json | ConvertFrom-Json` below.
+    render: console
+    placeholder: |
+      PS> Get-Content ~\.config\scoop\config.json | ConvertFrom-Json
+
+      lastupdate             : 2022/1/25 14:11:23
+      SCOOP_REPO             : https://github.com/ScoopInstaller/Scoop
+      SCOOP_BRANCH           : master
+      MSIEXTRACT_USE_LESSMSI : True
+      aria2-enabled          : True
+      aria2-warning-enabled  : False
+  validations:
+    required: true
+- type: textarea
+  attributes:
     label: PowerShell Version
     description: Paste verbatim output from `$PSVersionTable` below.
     render: console
