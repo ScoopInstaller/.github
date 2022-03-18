@@ -1,9 +1,4 @@
----
-name: "Code of Conduct"
-about: "The following Code of Conduct applies to all digital spaces managed by the Creative Commons engineering team, including GitHub, mailing lists, IRC and any other spaces which the development community uses for communication. Our Slack code of conduct is separate and <a href='https://wiki.creativecommons.org/wiki/Slack/Code_of_Conduct'>can be found here</a>."
-title: "CC Open Source Code of Conduct"
-source: "https://github.com/creativecommons/creativecommons.github.io-source/blob/master/content/community/code-of-conduct/contents.lr"
----
+# Contributor Covenant Code of Conduct
 
 ## Our Pledge
 
