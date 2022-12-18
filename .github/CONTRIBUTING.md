@@ -62,7 +62,7 @@ Once you've found an issue you'd like to work on, please follow these steps to m
 2. Fork the repository and create a new branch from the default branch (usually `master`), with an appropriate name.
 3. Write your code. Follow these guidelines for writing manifests:
     * Read the Wiki on how app manifests work - [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) - and how to create one - [Creating an App Manifest](https://github.com/ScoopInstaller/Scoop/wiki/Creating-an-app-manifest).
-    * Follow this general order of fields (whichever exist) in the JSON file:
+    * Follow this general order of fields (whichever exist) in the JSON file. Or use the [template](https://github.com/ScoopInstaller/BucketTemplate/blob/master/bucket/app-name.json.template) for a starter file.
       - `version`
       - `description`
       - `homepage`
