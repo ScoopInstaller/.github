@@ -70,8 +70,9 @@ Once you've found an issue you'd like to work on, please follow these steps to m
       - `notes`
       - `depends`
       - `suggest`
-      - `url`
-      - `hash`
+      - `architecture`
+        - `url`
+        - `hash`
       - `extract_dir`
       - `extract_to`
       - `pre_install`
