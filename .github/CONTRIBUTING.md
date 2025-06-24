@@ -45,7 +45,18 @@ Check the issue comments/labels to see whether someone else has indicated that t
 
 ## Contribution process
 
-Once you've found an issue you'd like to work on, please follow these steps to make your contribution:
+Once you've found an issue you'd like to work on, please follow these steps to make your contribution. Start by proposing a new issue.
+
+## Proposing a new issue
+
+If you want to work on something that there is no GitHub issue for, including for submitting a new package, follow these steps:
+
+1. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
+    * We are very reluctant to accept random pull requests without a related issue created first.
+2. Wait for a project maintainer to evaluate your issue and decide whether it's something that we will accept a pull request for.
+3. Once the project maintainer has approved the issue, you may start work on code as described in the **Contribution process** section above.
+
+When in doubt, ask a question in the Discussions tab of the relevant repository.
 
 ### For Scoop core:
 
@@ -105,14 +116,3 @@ Once you've found an issue you'd like to work on, please follow these steps to m
 8. Wait for code review and address any issues raised as soon as you can.
 
 **A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
-
-## Proposing a new issue
-
-If you want to work on something that there is no GitHub issue for, follow these steps:
-
-1. Create a new GitHub issue associated with the relevant repository and propose your change there. Be sure to include implementation details and the rationale for the proposed change.
-    * We are very reluctant to accept random pull requests without a related issue created first.
-2. Wait for a project maintainer to evaluate your issue and decide whether it's something that we will accept a pull request for.
-3. Once the project maintainer has approved the issue, you may start work on code as described in the **Contribution process** section above.
-
-When in doubt, ask a question in the Discussions tab of the relevant repository.
