@@ -112,7 +112,7 @@ When in doubt, ask a question in the Discussions tab of the relevant repository.
     * If it's a new manifest, use `<app name>: Add version <version>`.
     * If it's an update to an existing manifest, use `<app name>@<version>: <small description>`.
     * If it's something related to maintenance, use `(chore): <small description>`.
-7. Manifest validations will be triggered automatically when a PR is created. If your changes fail one or more checks, please address the issues in the manifest and comment starting with `/verify` to rerun the checks.
+7. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
 8. Wait for code review and address any issues raised as soon as you can.
 
 **A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
