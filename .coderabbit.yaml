@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "en-US"
+reviews:
+  profile: "chill" # chill for lighter feedback
+  collapse_walkthrough: false # do not collapse walkthrough the key information
+  commit_status: false # unnecessary
+  enable_prompt_for_ai_agents: false # unnecessary
+  estimate_code_review_effort: false # noise
+  high_level_summary_in_walkthrough: true # high-level summary in walkthrough instead of PR description
+  in_progress_fortune: false # literal noise
+  poem: false # literal noise
+  review_status: false # unnecessary
+  sequence_diagrams: false # no sequence diagrams in walkthrough
+  suggested_labels: false # do not suggest labels
+  suggested_reviewers: false # do not suggest reviewers, we use CODEOWNERS file
+chat:
+  art: false # literal noise
+  auto_reply: false # require a mention to reply
