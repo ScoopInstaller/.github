@@ -13,6 +13,11 @@ reviews:
   sequence_diagrams: false # no sequence diagrams in walkthrough
   suggested_labels: false # do not suggest labels
   suggested_reviewers: false # do not suggest reviewers, we use CODEOWNERS file
+  finishing_touches: # unnecessary
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
 chat:
   art: false # literal noise
   auto_reply: false # require a mention to reply
