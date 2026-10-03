@@ -115,4 +115,16 @@ When in doubt, ask a question in the Discussions tab of the relevant repository.
 7. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
 8. Wait for code review and address any issues raised as soon as you can.
 
+### Manifest Version Updates & Automated Routines
+
+Scoop utilizes automated CI/CD routines (GitHub Actions workflows and checkver) to continuously monitor upstream software repositories and automatically push manifest version updates to the official buckets (`Main`, `Extras`, etc.).
+
+To avoid duplicate work and race conditions with automations:
+- **Routine Automated Updates:** Contributors should generally **not** submit manual pull requests for routine version bumps immediately after an upstream release, as automated routines handle these on a scheduled cycle.
+- **Grace Period for Manual Fallback (X Days):** If a stable upstream version has been officially released for **more than X days** (<!-- Maintainers: please specify the preferred waiting threshold in days, e.g. 3, 5, or 7 days -->) without an automated update occurring (e.g., due to checkver regex changes, breaking download URL patterns, or hash mismatches), community pull requests are welcome and encouraged.
+- **PR Requirements for Manual Updates:** When submitting a manual version update PR after this grace period:
+  - Verify that the upstream version is a stable release (no pre-release/RC/beta unless the bucket specifically targets pre-releases).
+  - Mention in your PR description the upstream release date and note that the automated routine has not updated the package for > X days.
+  - Run local validation (`bin/checkver <app> -u` or Scoop test suite) to ensure hashes and download URLs resolve properly.
+
 **A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
