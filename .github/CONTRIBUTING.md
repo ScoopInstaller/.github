@@ -106,8 +106,16 @@ When in doubt, ask a question in the Discussions tab of the relevant repository.
     * If the program file is a GUI application _and_ it doesn't accept any commandline arguments, no need to add it in `bin`.
     * If an array contains only one item, write it as a string.
     * If the application provides _only_ a 32bit download, the `architecture` field is not required. In all other cases, `architecture` field is mandatory.
+    * **Preserve official download domains**: When updating or repairing download URLs, always preserve the official software publisher's domain (e.g., `developers.redhat.com`, `hashicorp.com`, `github.com`). Avoid switching to third-party or unofficial mirrors unless the official source has permanently discontinued hosting.
 4. Test your manifest by installing, uninstalling, checking functionality, persistence etc.
 5. Confirm that manifest gets updated automatically - see [App Manifest Autoupdate](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate).
+    * Leverage substitutable variables in `autoupdate` to accurately match vendor directory trees:
+      - `$version`: Full raw version string (e.g., `2.64.0`).
+      - `$matchHead`: Returns the first two or three numeric segments separated by a dot, stripping build or pre-release suffixes (e.g., `2.64.0-rc.1` ➔ `2.64.0`, `3.7-rc.1` ➔ `3.7`). Recommended when vendor paths use semantic heads.
+      - `$matchTail`: Returns the remainder after `$matchHead` (e.g., `-rc.1`).
+      - `$cleanVersion` (`2640`), `$underscoreVersion` (`2_64_0`), `$dashVersion` (`2-64-0`).
+      - `$majorVersion`, `$minorVersion`, `$patchVersion`: Individual version components.
+      - `$match1`, `$match2`, `$match<Name>`: Captured groups from `checkver` (e.g. regex or jsonpath captures).
 6. Submit your pull request. Titles should follow these rules:
     * If it's a new manifest, use `<app name>: Add version <version>`.
     * If it's an update to an existing manifest, use `<app name>@<version>: <small description>`.
