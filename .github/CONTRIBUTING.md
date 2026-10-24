@@ -115,4 +115,7 @@ When in doubt, ask a question in the Discussions tab of the relevant repository.
 7. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
 8. Wait for code review and address any issues raised as soon as you can.
 
+> [!NOTE]  
+> Scoop features an [automatic manifest update mechanism](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate) (checkver/autoupdate) and runs an automated scheduled task (commonly known as **Excavator**, typically running every 4 hours) to keep app manifests up to date. As such, **version-bump-only pull requests will not be accepted**, barring exceptional cases such as GitHub Runner IPs being blocked (e.g., by Cloudflare). If logs indicate an issue with the autoupdate mechanism, please fix it alongside bumping the version. Additionally, if an upstream application has an update but its manifest lacks an autoupdate configuration, please add one when submitting the update.
+
 **A note on collaboration:** We encourage people to collaborate as much as possible. We especially appreciate contributors reviewing each others pull requests, as long as you are [kind and constructive](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) when you do so.
