@@ -9,32 +9,7 @@ source: "https://github.com/creativecommons/creativecommons.github.io-source/blo
 
 Here's a list of [all our current repositories](https://github.com/orgs/ScoopInstaller/repositories). We use GitHub issues to track the work associated with each repository. That's where you can find things to work on.
 
-We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues. 
-<!-- 
-We have a standard set of labels across all projects, [documented here](/contributing-code/repo-labels/). Here are some of the ones that are most relevant to finding a good issue to work on:
-
-- **Issues available for community contribution:**
-  - The following tags mark issues that are open for community contribution:
-    - <span class="gh-label friendliness">help-wanted</span> : Open to participation from the community but not necessarily beginner-friendly
-    - <span class="gh-label friendliness">good first issue</span> : Open to participation from the community and friendly towards new contributors
-  - You do not need our permission to work on one of these issues.
-  - You may work on an issue labeled <span class="gh-label friendliness">good first issue</span> even if it's not your first issue.
-* **Issues not available for community contribution:**
-  - The following tags mark issues that are _not_ open for community contribution:
-    - <span class="gh-label friendliness">🔒 staff only</span> : Requires infrastructure access or institutional knowledge that would be impractical to provide to the community
-  - Do not work on these.
-- **Issues not ready for work:**
-  - The following tags mark issues that are _not_ open for community contribution:
-    - <span class="gh-label status-neutral">🚧 status: blocked</span>: Blocked by other work that needs to be done first
-    - <span class="gh-label status-dark">🧹 status: ticket work required </span>: Needs additional work before it is ready to be taken up
-    - <span class="gh-label status-darker">🚦 status: awaiting triage</span>: Has not been triaged by a maintainer
-  - Do not work on these.
-- **Issues without any of the above labels:**
-  - These issues _may_ (or may not) be open for contribution.
-  - Please add a comment asking one of the maintainers to triage the issue and label it as appropriate.
-
-You can use our [Issue Finder tool](/contributing-code/issue-finder/) to find a good issue that matches your skills and familiarity with our software and community.
--->
+We make extensive use of issue labels to designate the priority, status and beginner-friendliness of various issues.
 
 Some helpful saved searches on GitHub than can assist with finding an issue:
 - [issues labeled <span class="gh-label friendliness">good first issue</span>](https://github.com/search?q=org%3AScoopInstaller+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
@@ -108,12 +83,18 @@ When in doubt, ask a question in the Discussions tab of the relevant repository.
     * If the application provides _only_ a 32bit download, the `architecture` field is not required. In all other cases, `architecture` field is mandatory.
 4. Test your manifest by installing, uninstalling, checking functionality, persistence etc.
 5. Confirm that manifest gets updated automatically - see [App Manifest Autoupdate](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate).
-6. Submit your pull request. Titles should follow these rules:
-    * If it's a new manifest, use `<app name>: Add version <version>`.
-    * If it's an update to an existing manifest, use `<app name>@<version>: <small description>`.
+6. Keep the scope of each pull request narrow: in general, a PR should only change one manifest and its related files (variants, `.reg` scripts, `.ps1` scripts, etc.).
+7. Submit your pull request. Titles should follow these rules, and are validated against [this regular expression](https://regex101.com/r/cn45r4/1):
+    * If it's a new manifest, use `<app-name>: Add version <version>`.
+        * e.g. `tailcat: Add version 0.6.0`
+    * If it's an update to an existing manifest, use `<app-name>(@<version>): <small description>`.
+        * e.g. `wget@1.21.4: Fix moved urls`, `wget: Update to version 1.25.0, remove arm64 version`
+    * If it's an update to multiple related manifests, use `<app-name(*)>: <small description>`.
+        * e.g. `uutils-(*): Update homepage`, `uutils-coreutils(-lean): Fix shims`
     * If it's something related to maintenance, use `(chore): <small description>`.
-7. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
-8. Wait for code review and address any issues raised as soon as you can.
+        * e.g. `(chore): Resolve redirected GitHub repository URLs in bulk`
+8. Add a comment starting with "/verify" after raising the PR - this will kick in the automatic manifest verifier.
+9. Wait for code review and address any issues raised as soon as you can.
 
 > [!NOTE]  
 > Scoop features an [automatic manifest update mechanism](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate) (checkver/autoupdate) and runs an automated scheduled task (commonly known as **Excavator**, typically running every 4 hours) to keep app manifests up to date. As such, **version-bump-only pull requests will not be accepted**, barring exceptional cases such as GitHub Runner IPs being blocked (e.g., by Cloudflare). If logs indicate an issue with the autoupdate mechanism, please fix it alongside bumping the version. Additionally, if an upstream application has an update but its manifest lacks an autoupdate configuration, please add one when submitting the update.
